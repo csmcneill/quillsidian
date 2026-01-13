@@ -1,0 +1,9 @@
+title,subtitle,arg
+Start the Quillsidian webhook server,Start the server to begin processing Quill webhooks,start
+Stop the Quillsidian webhook server,Stop the server and end webhook processing,stop
+Check if the Quillsidian webhook server is running,Show current server status and process information,status
+Detailed health check of the Quillsidian webhook server,Perform a comprehensive health check and show detailed status,health
+View recent Quillsidian webhook server logs,Show the last 20 lines of server logs,logs
+Cleanly restart the Quillsidian webhook server,Stop and restart the server with a clean state,reboot
+Run the Quillsidian test suite,Execute all tests to verify server functionality,test
+Show the Quillsidian help message,Display available commands and usage information,help

@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "title": "Start the Quillsidian webhook server",
+      "subtitle": "Start the server to begin processing Quill webhooks",
+      "arg": "start",
+      "icon": "🚀"
+    },
+    {
+      "title": "Stop the Quillsidian webhook server",
+      "subtitle": "Stop the server and end webhook processing",
+      "arg": "stop",
+      "icon": "🛑"
+    },
+    {
+      "title": "Check if the Quillsidian webhook server is running",
+      "subtitle": "Show current server status and process information",
+      "arg": "status",
+      "icon": "📊"
+    },
+    {
+      "title": "Detailed health check of the Quillsidian webhook server",
+      "subtitle": "Perform a comprehensive health check and show detailed status",
+      "arg": "health",
+      "icon": "🏥"
+    },
+    {
+      "title": "View recent Quillsidian webhook server logs",
+      "subtitle": "Show the last 20 lines of server logs",
+      "arg": "logs",
+      "icon": "📋"
+    },
+    {
+      "title": "Cleanly restart the Quillsidian webhook server",
+      "subtitle": "Stop and restart the server with a clean state",
+      "arg": "reboot",
+      "icon": "🔄"
+    },
+    {
+      "title": "Run the Quillsidian test suite",
+      "subtitle": "Execute all tests to verify server functionality",
+      "arg": "test",
+      "icon": "🧪"
+    },
+    {
+      "title": "Reconcile all pending files automatically",
+      "subtitle": "Process all pending JSON files and match with transcripts",
+      "arg": "reconcile",
+      "icon": "🔄"
+    },
+    {
+      "title": "Browse pending files interactively",
+      "subtitle": "Select pending files and choose matching meetings",
+      "arg": "list",
+      "icon": "📄"
+    },
+    {
+      "title": "Show the Quillsidian help message",
+      "subtitle": "Display available commands and usage information",
+      "arg": "help",
+      "icon": "❓"
+    }
+  ]
+}
