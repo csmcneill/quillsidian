@@ -1,0 +1,45 @@
+# User-specific configuration (users create from config.example.py)
+config.py
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+server.log
+*.log
+
+# User-specific overrides (speaker label corrections)
+.quill_overrides/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Alfred workflow (contains user-specific paths)
+# Uncomment if you want to exclude the workflow file
+# *.alfredworkflow
+
+# Environment variables
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.temp
