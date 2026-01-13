@@ -1,6 +1,6 @@
 #!/bin/bash
-# Alfred Workflow: Quillsidian Server Manager
-# Usage: quill_manager.sh [command]
+# Alfred Workflow: Quillsidian
+# Usage: quillsidian.sh [command]
 # Commands: start, stop, status, health, logs, reboot, test
 
 # Get the Quill directory (parent of this script)

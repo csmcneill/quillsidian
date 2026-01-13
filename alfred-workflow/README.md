@@ -1,4 +1,4 @@
-# Alfred Workflow: Quillsidian Server Manager
+# Alfred Workflow: Quillsidian
 
 A comprehensive Alfred workflow for managing your Quillsidian webhook server without touching Terminal.
 
@@ -21,7 +21,7 @@ A comprehensive Alfred workflow for managing your Quillsidian webhook server wit
    - Open Alfred Preferences
    - Go to Workflows tab
    - Click the + button → Import
-   - Select the `Quillsidian Server Manager.alfredworkflow` file
+   - Select the `Quillsidian.alfredworkflow` file
    - Enable the workflow
    
    **Note**: The workflow file is not included in this repository. Import the workflow separately from your Alfred workflow export.
@@ -163,7 +163,7 @@ The workflow scripts automatically detect the Quillsidian project directory by n
 
 ```
 alfred-workflow/
-├── Quillsidian Server Manager.alfredworkflow  # Alfred workflow file (import separately)
+├── Quillsidian.alfredworkflow  # Alfred workflow file (import separately)
 ├── README.md                           # This file
 ├── quillsidian_commands.json           # Command definitions for autocomplete
 ├── quillsidian_commands.csv            # CSV version for List Filter
@@ -196,7 +196,7 @@ alfred-workflow/
 To update the workflow:
 1. Replace the scripts in the `scripts/` directory
 2. Update the `quillsidian_commands.json` if adding new commands
-3. Update the `Quillsidian Server Manager.alfredworkflow` if needed
+3. Update the `Quillsidian.alfredworkflow` if needed
 4. Re-import into Alfred
 
 **Note**: The workflow file itself is maintained separately and should be exported/imported through Alfred's workflow management interface.
