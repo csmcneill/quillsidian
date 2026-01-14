@@ -76,13 +76,13 @@ By default, Quillsidian expects this directory structure (PARA-style vault):
 Your Notes/                    # Vault root
 ├── 1. Projects/
 │   └── Work/
-│       └── Quillsidian/      # notes_root (3 levels deep)
+│       └── Quillsidian/       # notes_root (3 levels deep)
 │           ├── config.py
 │           ├── quill_server.py
 │           └── ...
-└── 3. Resources/             # At vault root level
+└── 3. Resources/              # At vault root level
     ├── Summaries/             # summaries_root
-    └── Transcripts/          # transcripts_root
+    └── Transcripts/           # transcripts_root
 ```
 
 **Path Calculation**: By default, `summaries_root` and `transcripts_root` are calculated relative to the vault root (3 levels up from `notes_root`). This assumes your Quillsidian project is located at `vault/1. Projects/Work/Quillsidian/`.
@@ -191,17 +191,17 @@ See `Enhanced Quill Templates/README.md` for:
 
 ```
 Quillsidian/
-├── quill_server.py          # Main Flask server
-├── config.py                # Your configuration (gitignored)
-├── config.example.py        # Configuration template
-├── database.py              # Database operations
-├── validation.py            # Webhook payload validation
-├── logging_config.py        # Logging configuration
-├── .venv/                   # Python virtual environment (gitignored)
-├── .quill_overrides/        # Manual speaker overrides (gitignored)
-├── Enhanced Quill Templates/ # Example Quill prompts
-├── alfred-workflow/         # Optional Alfred workflow
-└── README.md                # This file
+├── quill_server.py            # Main Flask server
+├── config.py                  # Your configuration (gitignored)
+├── config.example.py          # Configuration template
+├── database.py                # Database operations
+├── validation.py              # Webhook payload validation
+├── logging_config.py          # Logging configuration
+├── .venv/                     # Python virtual environment (gitignored)
+├── .quill_overrides/          # Manual speaker overrides (gitignored)
+├── Enhanced Quill Templates/  # Example Quill prompts
+├── alfred-workflow/           # Optional Alfred workflow
+└── README.md                  # This file
 ```
 
 ## Development
@@ -230,7 +230,7 @@ See `LICENSE` file for details.
 
 ## Acknowledgments
 
-- Built for use with [Quill](https://quill.ai/) meeting recording app
+- Built for use with [Quill](https://quillmeetings.com/) meeting recording app
 - Designed to work with [Obsidian](https://obsidian.md/) knowledge base
 
 ## Support
