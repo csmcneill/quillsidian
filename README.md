@@ -71,21 +71,25 @@ You can override any config setting using environment variables:
 
 ### Path Setup
 
-By default, Quillsidian expects this directory structure:
+By default, Quillsidian expects this directory structure (PARA-style vault):
 ```
-Your Notes/
+Your Notes/                    # Vault root
 ├── 1. Projects/
 │   └── Work/
-│       └── Quillsidian/     # notes_root
+│       └── Quillsidian/      # notes_root (3 levels deep)
 │           ├── config.py
 │           ├── quill_server.py
 │           └── ...
-└── 3. Resources/
-    ├── Summaries/            # summaries_root
+└── 3. Resources/             # At vault root level
+    ├── Summaries/             # summaries_root
     └── Transcripts/          # transcripts_root
 ```
 
-You can customize these paths in `config.py` or via environment variables.
+**Path Calculation**: By default, `summaries_root` and `transcripts_root` are calculated relative to the vault root (3 levels up from `notes_root`). This assumes your Quillsidian project is located at `vault/1. Projects/Work/Quillsidian/`.
+
+If your vault structure is different, you can:
+- Override paths using `QUILL_SUMMARIES_ROOT` and `QUILL_TRANSCRIPTS_ROOT` environment variables
+- Customize the path calculation in `config.py` by modifying the `summaries_root` and `transcripts_root` properties
 
 ## Usage
 

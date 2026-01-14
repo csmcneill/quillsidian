@@ -17,6 +17,7 @@ import json
 import logging
 import re
 import sqlite3
+import sys
 import itertools
 from collections import defaultdict
 from dataclasses import dataclass
@@ -324,6 +325,38 @@ def _second_pass_relable(lines: List[Tuple[str, str]], participants: List[str]) 
         fixed.append((p0 if not flip else p1, txt))
         flip = not flip
     return fixed
+
+# Validate configuration before proceeding
+# Auto-detect path if placeholder is used and we're running from the project directory
+if str(NOTES_ROOT) == "/path/to/your/quillsidian/project":
+    # Try to auto-detect: use the directory containing this script
+    script_dir = Path(__file__).parent.resolve()
+    if script_dir.name == "Quillsidian" or (script_dir / "quill_server.py").exists():
+        # Update config and all dependent constants
+        config.notes_root = script_dir
+        NOTES_ROOT = script_dir
+        SUMMARIES_ROOT = config.summaries_root
+        TRANSCRIPTS_ROOT = config.transcripts_root
+    else:
+        error_msg = (
+            "❌ Configuration Error: Quillsidian is not configured!\n\n"
+            "Please either:\n"
+            "1. Copy config.example.py to config.py and update notes_root with your actual path, OR\n"
+            "2. Set the QUILL_NOTES_ROOT environment variable\n\n"
+            f"Current notes_root: {NOTES_ROOT}\n"
+            "See README.md for configuration instructions."
+        )
+        print(error_msg, file=sys.stderr)
+        sys.exit(1)
+elif not NOTES_ROOT.exists():
+    error_msg = (
+        "❌ Configuration Error: notes_root path does not exist!\n\n"
+        f"Path: {NOTES_ROOT}\n\n"
+        "Please update config.py or set QUILL_NOTES_ROOT environment variable.\n"
+        "See README.md for configuration instructions."
+    )
+    print(error_msg, file=sys.stderr)
+    sys.exit(1)
 
 OVERRIDES_DIR = NOTES_ROOT / ".quill_overrides"
 ensure_dir(OVERRIDES_DIR)

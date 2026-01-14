@@ -81,8 +81,11 @@ class QuillConfig:
         env_path = os.getenv("QUILL_SUMMARIES_ROOT")
         if env_path:
             return Path(env_path)
-        # Default: summaries directory relative to notes_root
-        return self.notes_root.parent.parent / "3. Resources" / "Summaries"
+        # Default: summaries directory relative to vault root (3 levels up from notes_root)
+        # Assumes vault structure: vault/1. Projects/Work/Quillsidian
+        # Returns: vault/3. Resources/Summaries
+        # Adjust the number of .parent calls based on your vault structure
+        return self.notes_root.parent.parent.parent / "3. Resources" / "Summaries"
     
     @property
     def transcripts_root(self) -> Path:
@@ -90,8 +93,11 @@ class QuillConfig:
         env_path = os.getenv("QUILL_TRANSCRIPTS_ROOT")
         if env_path:
             return Path(env_path)
-        # Default: transcripts directory relative to notes_root
-        return self.notes_root.parent.parent / "3. Resources" / "Transcripts"
+        # Default: transcripts directory relative to vault root (3 levels up from notes_root)
+        # Assumes vault structure: vault/1. Projects/Work/Quillsidian
+        # Returns: vault/3. Resources/Transcripts
+        # Adjust the number of .parent calls based on your vault structure
+        return self.notes_root.parent.parent.parent / "3. Resources" / "Transcripts"
     
     @property
     def overrides_dir(self) -> Path:
